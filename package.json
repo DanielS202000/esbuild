@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "deploy": "gh-pages -d dist",
     "build:dev": "node esbuild.dev.js",
-    "start": "node esbuild.dev.js -w",
+    "start": "node esbuild.config.js -w",
     "open": "open public/index.html"
   },
   "keywords": [],
@@ -15,7 +16,11 @@
   "license": "ISC",
   "devDependencies": {
     "esbuild": "^0.17.14",
-    "esbuild-serve": "^1.0.1"
+    "esbuild-serve": "^1.0.1",
+    "esbuild-server": "^0.1.2",
+    "gh-pages": "^5.0.0",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.17.4"
   },
   "dependencies": {
     "@types/react": "^18.0.35",
@@ -23,5 +28,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "type": "module"
 }
