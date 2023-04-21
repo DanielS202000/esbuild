@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './components/App';
 
 ReactDOM.render(
-    <App message="Platzi ESBuild Example"/>, document.getElementById("app")
+   <App message = "Platzi EsBuild Example"/>,
+   document.getElementById("app")
 );
